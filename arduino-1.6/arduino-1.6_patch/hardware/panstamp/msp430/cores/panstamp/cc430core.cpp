@@ -141,6 +141,10 @@ void CC430CORE::init(uint8_t vCore, uint16_t dcorsel, uint16_t flln)
   PMMCTL0_L |= PMMHPMRE_L; 
   PMMCTL0_H = 0x00; 
 
+  #ifdef __SPRITE_VERSION_1__
+  UCSCTL3 |= SELREF_2;              // Set DCO FLL reference = REFO
+  UCSCTL4 |= SELA_2;                  // Set ACLK = REFO
+  #else
   /**  
    * Enable 32kHz ACLK	
    */
@@ -152,7 +156,8 @@ void CC430CORE::init(uint8_t vCore, uint16_t dcorsel, uint16_t flln)
    * Select XT1 as FLL reference
    */
   UCSCTL3 = SELA__XT1CLK;
-  UCSCTL4 = SELA__XT1CLK | SELS__DCOCLKDIV | SELM__DCOCLKDIV;  
+  UCSCTL4 = SELA__XT1CLK | SELS__DCOCLKDIV | SELM__DCOCLKDIV; 
+  #endif 
 
   /*
    * Configure CPU clock
@@ -161,6 +166,9 @@ void CC430CORE::init(uint8_t vCore, uint16_t dcorsel, uint16_t flln)
  
   // Loop until XT1 & DCO stabilizes, use do-while to ensure that 
   // the body is executed at least once
+  #ifdef __SPRITE_VERSION_1__
+  RF1AIES = BIT0 | BIT9;
+  #else
   do
   {
     UCSCTL7 &= ~(XT2OFFG + XT1LFOFFG + XT1HFOFFG + DCOFFG);
@@ -175,6 +183,7 @@ void CC430CORE::init(uint8_t vCore, uint16_t dcorsel, uint16_t flln)
    * Interrupt Edge select register: 1 == Interrupt on High to Low transition.
    */
   RF1AIES = BIT0 | BIT9;
+  #endif
   
   // POWER: Turn ADC and reference voltage off to conserve power
   ADC12CTL0 &= ~ADC12ENC;
@@ -223,8 +232,16 @@ void __inline__ CC430CORE::setMCLK(uint16_t dcorsel, uint16_t flln)
    */
   _BIS_SR(SCG0);              // Disable the FLL control loop
   UCSCTL0 = 0x0000;           // Set lowest possible DCOx, MODx
+  #ifdef __SPRITE_VERSION_1__
+  UCSCTL1 = DCORSEL_5;              // Select DCO range 16MHz operation
+  UCSCTL2 = FLLD_1 + 249;           // Set DCO Multiplier for 8MHz
+                                    // (N + 1) * FLLRef = Fdco
+                                    // (249 + 1) * 32768 = 8MHz
+                                    // Set FLL Div = fDCOCLK/2
+  #else
   UCSCTL1 = dcorsel;          // Select suitable range
   UCSCTL2 = FLLD_1 + flln;    // Set DCO Multiplier
+  #endif
   _BIC_SR(SCG0);              // Enable the FLL control loop
 
   // Worst-case settling time for the DCO when the DCO range bits have been
