@@ -1165,21 +1165,21 @@ LOAD /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp
  .debug_abbrev  0x0000000000000b7c       0x14 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
  .debug_abbrev  0x0000000000000b90       0x14 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
 
-.debug_line     0x0000000000000000      0xcf7
+.debug_line     0x0000000000000000      0xb8f
  *(.debug_line)
- .debug_line    0x0000000000000000      0x337 rfloader.o
- .debug_line    0x0000000000000337      0x200 cc430radio.o
- .debug_line    0x0000000000000537      0x1de rf1a.o
- .debug_line    0x0000000000000715      0x127 pmm.o
- .debug_line    0x000000000000083c      0x159 swap.o
- .debug_line    0x0000000000000995      0x107 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
- .debug_line    0x0000000000000a9c       0x54 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
- .debug_line    0x0000000000000af0       0x54 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
- .debug_line    0x0000000000000b44       0x59 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
- .debug_line    0x0000000000000b9d       0x59 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
- .debug_line    0x0000000000000bf6       0x55 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
- .debug_line    0x0000000000000c4b       0x54 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
- .debug_line    0x0000000000000c9f       0x58 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
+ .debug_line    0x0000000000000000      0x2ef rfloader.o
+ .debug_line    0x00000000000002ef      0x1b8 cc430radio.o
+ .debug_line    0x00000000000004a7      0x196 rf1a.o
+ .debug_line    0x000000000000063d       0xdf pmm.o
+ .debug_line    0x000000000000071c      0x111 swap.o
+ .debug_line    0x000000000000082d      0x107 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_line    0x0000000000000934       0x54 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__watchdog_support-dwdt.o)
+ .debug_line    0x0000000000000988       0x54 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(__init_stack-dwdt.o)
+ .debug_line    0x00000000000009dc       0x59 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_copy_data-dwdt.o)
+ .debug_line    0x0000000000000a35       0x59 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_clear_bss-dwdt.o)
+ .debug_line    0x0000000000000a8e       0x55 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_endless_loop__-dwdt.o)
+ .debug_line    0x0000000000000ae3       0x54 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_unexpected_-dwdt.o)
+ .debug_line    0x0000000000000b37       0x58 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/mcpu-430x/mmpy-16/libcrt0dwdt.a(_ctors430-dwdt.o)
 
 .debug_frame    0x0000000000000000      0x22e
  *(.debug_frame)
@@ -1190,19 +1190,19 @@ LOAD /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp
  .debug_frame   0x00000000000001ce       0x34 swap.o
  .debug_frame   0x0000000000000202       0x2c /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
 
-.debug_str      0x0000000000000000      0xe46
+.debug_str      0x0000000000000000      0xe07
  *(.debug_str)
- .debug_str     0x0000000000000000      0xb1e rfloader.o
-                                        0xbfd (size before relaxing)
- .debug_str     0x0000000000000b1e       0x3c cc430radio.o
-                                        0x492 (size before relaxing)
- .debug_str     0x0000000000000b5a      0x19c rf1a.o
-                                        0x302 (size before relaxing)
- .debug_str     0x0000000000000cf6       0x70 pmm.o
-                                        0x1b3 (size before relaxing)
- .debug_str     0x0000000000000d66        0xf swap.o
-                                        0x654 (size before relaxing)
- .debug_str     0x0000000000000d75       0xd1 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
+ .debug_str     0x0000000000000000      0xadf rfloader.o
+                                        0xbbe (size before relaxing)
+ .debug_str     0x0000000000000adf       0x3c cc430radio.o
+                                        0x453 (size before relaxing)
+ .debug_str     0x0000000000000b1b      0x19c rf1a.o
+                                        0x2c3 (size before relaxing)
+ .debug_str     0x0000000000000cb7       0x70 pmm.o
+                                        0x174 (size before relaxing)
+ .debug_str     0x0000000000000d27        0xf swap.o
+                                        0x615 (size before relaxing)
+ .debug_str     0x0000000000000d36       0xd1 /Applications/Arduino.app/Contents/hardware/tools/msp430/bin/../lib/gcc/msp430/4.6.3/../../../../msp430/lib/mcpu-430x/mmpy-16/libc.a(memcpy.o)
                                         0x11f (size before relaxing)
 
 .debug_loc      0x0000000000000000      0x87d
